@@ -6,16 +6,17 @@ import java.util.List;
 
 public class InsertElement2 {
 
-    public static ArrayList<Integer> insertElement(Integer[] array,
+    public static Integer[] insertElement(Integer[] array,
                                                    int value,
                                                    int position) {
          ArrayList<Integer> list = new ArrayList<Integer>(Arrays.asList(array));
 
          list.add(position, value);
-         return list;
+         array = list.toArray(array);
+         return array;
     }
 
-    private static void showNewArray(ArrayList<Integer> array) {
+    private static void showNewArray(Integer[] array) {
 
         for (Integer i : array) {
             System.out.print(i + ", ");
