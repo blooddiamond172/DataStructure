@@ -13,6 +13,7 @@ public class InsertElement1 {
         int[] newArray = new int[sizeOfArray + 1];
 
         for (int i = 0; i < newArray.length; i++) {
+
             if (i < position - 1) {
                 newArray[i] = array[i];
             } else if (i == position - 1) {
@@ -20,7 +21,9 @@ public class InsertElement1 {
             } else {
                 newArray[i] = array[i - 1];
             }
+
         }
+
         return newArray;
     }
 
@@ -34,6 +37,6 @@ public class InsertElement1 {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        showNewArray(insertElement(numbers, 9, 50, 5));
+        showNewArray(insertElement(numbers, numbers.length, 50, 5));
     }
 }
